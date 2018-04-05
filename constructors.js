@@ -14,8 +14,10 @@
 */
 
 // Code here
-
-
+function CarFactory(make, model) {
+  this.make = make;
+  this.model = model;
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -31,28 +33,36 @@ function Employee(name, email, hireDate) {
   Invoke the constructor function above and pass in 'Bob', 'bob@gmail.com', and '01-02-98' as arguments.
   Assign the result of the invocation to a variable called bob.
 */
-
+let bob = new Employee("Bob", "bob@gmail.com", "01-02-98");
 // Code here
 
-
-
 ////////// PROBLEM 4 //////////
+class Car {
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.move = 0;
+  }
+
+  moveCar(move) {
+    return (this.move += move);
+  }
+}
 
 // Do not edit the code below.
-var prius = new Car('Toyota', 'Prius', 2011);
-var mustang = new Car('Ford', 'Mustang', 2013);
+var prius = new Car("Toyota", "Prius", 2011);
+var mustang = new Car("Ford", "Mustang", 2013);
 prius.moveCar(); // Increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); // Increments mustang' move property by 10. Returns the new move property.
 // Do not edit the code above.
 
 /*
-  Write a constructor function, including method definitions, which will make the above function invocations function properly.
+Write a constructor function, including method definitions, which will make the above function invocations function properly.
 
-  Hint: you'll need to add a move property, with a starting value of zero, and write a moveCar function which will increment the move property by 10.
-  The move property will be added to every object that is being returned from the Car function.
-  You'll also need to use the 'this' keyword properly in order to make sure you're invoking moveCar on the right object (prius vs mustang).
+Hint: you'll need to add a move property, with a starting value of zero, and write a moveCar function which will increment the move property by 10.
+The move property will be added to every object that is being returned from the Car function.
+You'll also need to use the 'this' keyword properly in order to make sure you're invoking moveCar on the right object (prius vs mustang).
 */
 
 // Code here
-
-
